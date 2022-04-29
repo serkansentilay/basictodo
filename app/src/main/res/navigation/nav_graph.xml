@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tasksFragment">
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.serkan.todoapp.ui.tasks.tasksFragment"
+        android:label="Tasks"
+        tools:layout="@layout/taskfragment">
+        <action
+            android:id="@+id/action_tasksFragment_to_addedittaskFragment"
+            app:destination="@id/addedittaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addedittaskFragment"
+        android:name="com.serkan.todoapp.ui.addedittask.addedittaskFragment"
+        android:label="{title}"
+        tools:layout="@layout/taskaddfragmentedit" >
+        <argument
+            android:name="task"
+            app:argType="com.serkan.todoapp.data.Task"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteallcompleted"
+        android:name="com.serkan.todoapp.ui.delete.deleteallcompleted"
+        android:label="deleteallcompleted" /><action android:id="@+id/action_global_deleteallcompleted" app:destination="@id/deleteallcompleted"/>
+</navigation>

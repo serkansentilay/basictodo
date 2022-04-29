@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.addedittask.addedittaskFragment"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="Task Name"
+        android:id="@+id/taskaddnameedittext"
+        android:inputType="text"
+        android:layout_height="wrap_content">
+
+    </EditText>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:text="Important Task !"
+            android:id="@+id/taskaddimportantcheck"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+        <TextView
+            android:id="@+id/taskaddcreatedtext"
+            android:layout_width="match_parent"
+            android:text="Date created:"
+            android:layout_height="wrap_content"></TextView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/fab_savcheck"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_check_24"
+        android:layout_height="wrap_content"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
